@@ -11,17 +11,19 @@ public class PlayerController1 : MonoBehaviour
     }
 
     // Update is called once per frame
-    public float speed = 20.0F;
-    public float turnSpeed = 45.0F;
-    public float horizontalInput;
-    public float forwardInput;
+    private float speed = 20F;
+    private float turnSpeed = 45F;
+    private float horizontalInput = 25F;
+    private float forwardInput = 0F;
 
     void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
+        forwardInput = Input.GetAxis("Vertical");
         // Moves the car forward based on verticle input
-        // Move the vehicle forward
         transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
+        // Move the vehicle forward
         transform.Rotate(Vector3.up, horizontalInput * turnSpeed * Time.deltaTime);
+        // turns the car so it doesnt look like it is gliding left and right
     }
 }
