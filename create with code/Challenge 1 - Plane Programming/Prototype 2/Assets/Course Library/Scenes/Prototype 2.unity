@@ -203,7 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalInput: 0
   speed: 30
-  xRange: 45.95
+  xRange: 20
   projectilePrefab: {fileID: 5995367464832950494, guid: eafc7ccad86ca4a45943c61b0d2e580e, type: 3}
 --- !u!65 &87535325
 BoxCollider:
