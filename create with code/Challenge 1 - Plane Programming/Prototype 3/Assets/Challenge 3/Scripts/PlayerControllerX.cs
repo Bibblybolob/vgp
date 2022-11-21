@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -36,7 +36,7 @@ public class PlayerControllerX : MonoBehaviour
         // While space is pressed and player is low enough, float up
         if (Input.GetKeyDown(KeyCode.Space) && !gameOver)
         {
-            playerRb.AddForce(Vector3.up * floatForce, ForceMode.Impulse);
+            playerRb.AddForce(Vector3.up * floatForce);
         }
     }
 
