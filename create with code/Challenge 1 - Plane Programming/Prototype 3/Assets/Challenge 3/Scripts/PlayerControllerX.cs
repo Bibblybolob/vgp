@@ -9,10 +9,8 @@ public class PlayerControllerX : MonoBehaviour
     public float floatForce;
     private float gravityModifier = 1.5f;
     private Rigidbody playerRb;
-
     public ParticleSystem explosionParticle;
     public ParticleSystem fireworksParticle;
-
     private AudioSource playerAudio;
     public AudioClip moneySound;
     public AudioClip explodeSound;
