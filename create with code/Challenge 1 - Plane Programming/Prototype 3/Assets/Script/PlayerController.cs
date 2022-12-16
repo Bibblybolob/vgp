@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
+    public int score;
+    public TextMeshProUGUI scoreText;
     private Rigidbody playerRb;
     private Animator playerAnim;
     public ParticleSystem explosionParticle;
@@ -20,6 +25,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        score = 0;
+        UpdateScore(0);
         playerRb = GetComponent<Rigidbody>();
         playerAnim = GetComponent<Animator>();
        Physics.gravity *= gravityModifier;
@@ -29,6 +36,16 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.R) && !gameOver)
+        {
+            score += 5;
+            UpdateScore(0);
+        }
+        if (!gameOver)
+        {
+        score += 1;
+        UpdateScore(0);
+        } 
         if (Input.GetKeyDown(KeyCode.Space) && jump < maxJump && !gameOver)
         {
              playerAudio.PlayOneShot(jumpSound, 1.0f);
@@ -59,5 +76,9 @@ public class PlayerController : MonoBehaviour
             explosionParticle.Play();
             dirtParticle.Stop();
         }
+    }
+    public void UpdateScore(int scoreToAdd)
+    {
+        scoreText.text = "Score: " + score;
     }
 }
