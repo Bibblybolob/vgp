@@ -750,7 +750,7 @@ MonoBehaviour:
   gravityModifier: 6.22
   isOnGround: 1
   gameOver: 0
-  dirtParticle: {fileID: 1430810191}
+  dirtParticle: {fileID: 1438565936, guid: fb82dfb8d1c7044c69afd2486befecb3, type: 3}
   jumpSound: {fileID: 8300000, guid: 4bcde6de2166e41e284ec46d8a01fb90, type: 3}
   crashSound: {fileID: 8300000, guid: 08ab7053d586c458db3774d33c141a4b, type: 3}
   maxJump: 2
@@ -1159,11 +1159,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb7cd9b0c56a24d49a40784bd3203ae6, type: 3}
---- !u!198 &1430810191 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 1438565936, guid: fb82dfb8d1c7044c69afd2486befecb3, type: 3}
-  m_PrefabInstance: {fileID: 842797303}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1536654667
 GameObject:
   m_ObjectHideFlags: 0
