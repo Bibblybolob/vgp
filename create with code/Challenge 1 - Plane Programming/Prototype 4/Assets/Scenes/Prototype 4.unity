@@ -293,7 +293,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.42
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &320643086
 MeshRenderer:
@@ -373,6 +373,12 @@ MonoBehaviour:
   speed: 18.04
   hasPowerup: 0
   powerupIndicator: {fileID: 1487388374}
+  currentPowerUp: 0
+  rocketPrefab: {fileID: 2829521885883490115, guid: f5a283a2a02c5334595f9b303ee8f3f5, type: 3}
+  hangTime: 1
+  smashSpeed: 10
+  explosionForce: 10
+  explosionRadius: 10
 --- !u!1 &1211016355
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,10 +750,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad421299626368c469cde80b1bd79f05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefabs: {fileID: 5155755533001250494, guid: fb480993aeab8b34bbd5aa7383199dae, type: 3}
+  enemyPrefabs:
+  - {fileID: 5155755533001250494, guid: fb480993aeab8b34bbd5aa7383199dae, type: 3}
+  - {fileID: 3564723843651529308, guid: c5840f8d85453824db628d5d1519e5d6, type: 3}
+  - {fileID: 7078492724188004576, guid: ceeacf425c0095f4b8b6b79367dc37ec, type: 3}
   waveNumber: 1
   enemyCount: 1
-  powerupPrefabs: {fileID: 5839108284896520931, guid: 5144bb606198bd64f8b13fe64c5c197a, type: 3}
+  powerupPrefabs:
+  - {fileID: 1192983798335586, guid: 9e928de923724f54ea836e735efdd8b6, type: 3}
+  - {fileID: 1192983798335586, guid: 1342640fcb9c38244a9a4e9de8fe910b, type: 3}
+  - {fileID: 1192983798335586, guid: a9d610c25b916664eabed56574fe2f5a, type: 3}
 --- !u!4 &2104007688
 Transform:
   m_ObjectHideFlags: 0

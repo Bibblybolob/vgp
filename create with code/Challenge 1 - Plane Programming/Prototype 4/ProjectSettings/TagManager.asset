@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Player Goal
   - Enemy Goal
+  - Target
   layers:
   - Default
   - TransparentFX

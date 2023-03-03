@@ -2,27 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class RocketBehavior : MonoBehaviour
+
 {
     private Transform target;
-    private float speed = 15.0f;
-    private bool homing;
-    private float rocketStrength = 15.0f;
-    private float aliveTimer = 5.0f;
+private float speed = 15.0f;
+private bool homing;
 
+private float rocketStrength = 15.0f;
+private float aliveTimer = 5.0f;
+   
+    // Update is called once per frame
     void Update()
     {
-        if (homing && target != null)
+        if(homing && target != null)
         {
             Vector3 moveDirection = (target.transform.position - transform.position).normalized;
-            transform.position += moveDirection * speed * Time.deltaTime;
-            transform.LookAt(target);
+             transform.position += moveDirection * speed * Time.deltaTime;
         }
+        
+        transform.LookAt(target);
     }
-    public void Fire (Transform newTarget)
+    public void Fire(Transform newTarget)
     {
-        target = homingTarget;
+        
         homing = true;
+        target = newTarget;
         Destroy(gameObject, aliveTimer);
     }
     void OnCollisionEnter(Collision col)
@@ -38,5 +44,4 @@ public class RocketBehavior : MonoBehaviour
             }
         }
     }
-
 }
