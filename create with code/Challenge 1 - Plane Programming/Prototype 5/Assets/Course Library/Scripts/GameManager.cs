@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
+    public GameObject pauseScreen;
+    private bool paused;
     public int score;
     public TextMeshProUGUI scoreText;
     public List<GameObject> targets;
@@ -28,6 +30,23 @@ public class GameManager : MonoBehaviour
         UpdateLives(3);
         titleScreen.gameObject.SetActive(false);
     }
+    void ChangePaused()
+    {
+        if (!paused)
+    {
+        paused = true;
+        pauseScreen.SetActive(true);
+        Time.timeScale = 0;
+    }
+        else
+    {
+        paused = false;
+        pauseScreen.SetActive(false);
+        Time.timeScale = 1;
+    }
+        }
+
+    
     void Start() 
     {
         
@@ -45,7 +64,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.P))
+    {
+        ChangePaused();
+    }
+
     }
     public void UpdateScore(int scoreToAdd)
     {
