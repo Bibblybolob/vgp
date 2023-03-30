@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
         StartCoroutine(SpawnTarget());
         score = 0;
         UpdateScore(0);
-        UpdateLives(16);
+        UpdateLives(3);
         titleScreen.gameObject.SetActive(false);
     }
     void ChangePaused()
