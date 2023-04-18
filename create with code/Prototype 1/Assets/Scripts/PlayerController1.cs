@@ -11,10 +11,10 @@ public class PlayerController1 : MonoBehaviour
     }
 
     // Update is called once per frame
-    private float speed = 20F;
-    private float turnSpeed = 45F;
-    private float horizontalInput = 25F;
-    private float forwardInput = 0F;
+    [SerializeField] float speed = 20F;
+    [SerializeField] float turnSpeed = 45F;
+    [SerializeField] float horizontalInput = 25F;
+    [SerializeField] float forwardInput = 0F;
 
     void Update()
     {
