@@ -6,7 +6,7 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject[] objectPrefabs;
     private float spawnDelay = 2;
-    private float spawnInterval = 20f;
+    private float spawnInterval = 2f;
     private PlayerController playerControllerScript;
     // Start is called before the first frame update
     void Start()
@@ -23,7 +23,7 @@ public class SpawnManager : MonoBehaviour
      void SpawnObjects ()
     {
         // Set random spawn location and random object index
-        Vector3 spawnLocation = new Vector3(0, Random.Range(0, 0), 0);
+        Vector3 spawnLocation = new Vector3(0, Random.Range(0, 1), 0);
         int index = Random.Range(0, objectPrefabs.Length);
 
         // If game is still active, spawn new object
