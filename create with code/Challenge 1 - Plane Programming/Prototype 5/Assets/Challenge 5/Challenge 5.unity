@@ -1027,6 +1027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6467173372bc44b9cacdcd25af1c28bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerText: {fileID: 492106617}
   scoreText: {fileID: 116231999}
   gameOverText: {fileID: 919200876}
   titleScreen: {fileID: 92482018}

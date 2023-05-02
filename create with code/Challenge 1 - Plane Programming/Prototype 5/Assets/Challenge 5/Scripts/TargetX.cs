@@ -8,9 +8,7 @@ public class TargetX : MonoBehaviour
     private GameManagerX gameManagerX;
     public int pointValue;
     public GameObject explosionFx;
-
     public float timeOnScreen = 1.0f;
-
     private float minValueX = -3.75f; // the x value of the center of the left-most square
     private float minValueY = -3.75f; // the y value of the center of the bottom-most square
     private float spaceBetweenSquares = 2.5f; // the distance between the centers of squares on the game board

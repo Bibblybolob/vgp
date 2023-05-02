@@ -7,7 +7,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] objectPrefabs;
     private float spawnDelay = 2;
     private float spawnInterval = 2f;
-    private PlayerController playerControllerScript;
+    public PlayerController playerControllerScript;
     // Start is called before the first frame update
     void Start()
     {
