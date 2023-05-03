@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject[] objectPrefabs;
+    public GameObject powerupPrefab;
+    private float spawnRangeX = 10;
+    private float spawnZMin = 15; // set min spawn Z
+    private float spawnZMax = 25;
+    public GameObject objectPrefabs;
     private float spawnDelay = 2;
     private float spawnInterval = 2f;
     public PlayerController playerControllerScript;
@@ -23,14 +27,18 @@ public class SpawnManager : MonoBehaviour
      void SpawnObjects ()
     {
         // Set random spawn location and random object index
-        Vector3 spawnLocation = new Vector3(0, Random.Range(0, 0), 0);
-        int index = Random.Range(0, objectPrefabs.Length);
 
         // If game is still active, spawn new object
         if (!playerControllerScript.gameOver)
         {
-            Instantiate(objectPrefabs[index], spawnLocation, objectPrefabs[index].transform.rotation);
+            Instantiate(objectPrefabs, GenerateSpawnPosition(), objectPrefabs.transform.rotation);
         }
 
+    }
+    Vector3 GenerateSpawnPosition ()
+    {
+        float xPos = Random.Range(-spawnRangeX, spawnRangeX);
+        float zPos = Random.Range(spawnZMin, spawnZMax);
+        return new Vector3(xPos, 0, zPos);
     }
 }

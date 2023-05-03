@@ -437,12 +437,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b44b96634344054a8a134ef9f62b689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPrefabs:
-  - {fileID: 29236196024266752, guid: 0e874752673b12d49b5258faaf291016, type: 3}
-  - {fileID: 6498394930876155882, guid: 0cb22c0ddac5e4d4f9a58069429e0fe4, type: 3}
-  - {fileID: 7347332995917268877, guid: 04caa4ad78b619049bb76c360f64c619, type: 3}
-  - {fileID: 2942222585528180327, guid: 13b51b2626ffee14189fc75f1a70c356, type: 3}
-  playerControllerScript: {fileID: 0}
+  powerupPrefab: {fileID: 7551446086800393029, guid: 00414058fc7df434f9a5fd15d6d342bb, type: 3}
+  objectPrefabs: {fileID: 29236196024266752, guid: 0e874752673b12d49b5258faaf291016, type: 3}
+  playerControllerScript: {fileID: 1929955737}
 --- !u!1 &1182510896
 GameObject:
   m_ObjectHideFlags: 0
